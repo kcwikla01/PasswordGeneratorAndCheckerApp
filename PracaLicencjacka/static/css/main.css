@@ -1,0 +1,89 @@
+/* Resetowanie domyślnych styli */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styl dla body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+.navbar {
+    background-color: #343a40; /* Kolor tła */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Cień */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Rozmiar tekstu */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #17a2b8; /* Kolor tekstu po najechaniu */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #17a2b8; /* Kolor tła po najechaniu na pozycję w menu rozwijanym */
+}
+
+/* Styl dla karuzeli */
+.carousel, .checkPassword {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(80vh - 140px); /* Wysokość równa wysokości okna przeglądarki minus wysokość stopki */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Cień */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+}
+
+#whatAdd {
+    font-size: 1.5rem;
+}
+
+
+@keyframes showSection {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.form-container .card-body {
+    padding: 0; /* Usuń wewnętrzny odstęp dla treści formularza */
+}
+/* Styl dla suwaka */
+.form-range {
+    margin-bottom: 0.5rem; /* Margines od dołu */
+}
+
+/* Styl dla pola tekstowego */
+.form-control {
+    margin-bottom: 0.5rem; /* Margines od dołu */
+}
+/* Ukryj sekcje na początku */
+.carousel, .checkPassword,.generator{
+    animation: showSection 1s ease-out forwards;
+}
+
+/* Wyświetl sekcje po załadowaniu strony */
+.loaded .carousel, .loaded .checkPassword,.loaded .generator {
+    opacity: 1;
+}
+/* Styl dla stopki */
+.footer {
+    position: fixed; /* Ustaw stopkę na stałej pozycji */
+    bottom: 0; /* Umieść stopkę na dole ekranu */
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamil Ćwikła">
+    <title>Secure Pass Guide</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Własny CSS -->
+    <link href="../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/index.css" rel="stylesheet">
+    <link href="../static/css/lightTheme.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+{% include 'navbar.html' %}
+<!-- Carousel -->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <h2>Witaj na stronie Security Pass Guide</h2>
+                <p>Secure Pass Guide to miejsce, gdzie dowiesz się, jak ważne są silne hasła dla Twojej prywatności online. Naszym celem jest edukacja użytkowników w tym jak tworzyć złożone hasła oraz dajemy możliwość sprawdzenia czy twoje hasło jest odpowiednio bezpieczne.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <h2>Czy zdajesz sobie sprawę, czym naprawdę jest hasło dostępu?</h2>
+                <p>To nie tylko zestaw znaków. To klucz do twojej prywatności i bezpieczeństwa online. Dowiedz się, jak stworzyć hasło, które jest wystarczająco silne, by chronić Twoje dane</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <h2>Generator silnych haseł</h2>
+                <p>Użyj naszego narzędzia, aby wygenerować bezpieczne hasła dla swoich kont online.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+{% include 'footer.html' %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/colorTheme.js"></script>
+</body>
+</html>

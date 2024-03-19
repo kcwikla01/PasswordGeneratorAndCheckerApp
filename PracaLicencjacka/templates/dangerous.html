@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kamil Ćwikła">
+    <title>Secure Pass Guide</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Własny CSS -->
+    <link href="../static/css/main.css" rel="stylesheet">
+    <link href="../static/css/educationSection.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+{% include 'navbar.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card text-light education">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Niebezpieczeństwa w sieci</h2>
+                    <p class="card-text">W dzisiejszym świecie całe swoje informacje o sobie przechowujemy w plikach. Wielu użytkowników nie zawraca sobie głowy, jak wiele niebezpieczeństw dla naszych danych istnieje.
+                        W tej części dowiesz się jakie najpopularniejsze zagrożenia istnieją w sieci oraz czym poszczególne z nich się charakteryzują i różnią, oraz jak ochronić się przed nimi.</p>
+                    <h3>Phishing</h3>
+                    <p class="card-text">Według mnie jednym z najczęściej występujących przyczyn
+                        utraty prywatnych danych jest Phishing. Ta technika jest głównie oparta o wiadomości e-mail, sms czy czaty internetowe.
+                        Wykorzystuje ona inżynierię społeczną, czyli atak polegający na tym, że przestępcy internetowi próbują Cię oszukać i
+                        spowodować, abyś podjął działanie zgodnie z ich zamierzeniami. Cyberprzestępcy podszywają się między innymi pod firmy kurierskie, urzędy administracji, czy nawet naszych znajomych,
+                        przez co próbują wykraść nasze dane do logowania
+                    do np. kont bankowych lub kont społecznościowych czy systemów biznesowych. Phishing działa za pomocą
+                        wysyłania celowych wiadomości, których celem jest przekonanie użytkownika do kliknięcia linku, wysłania żądanych informacji czy nawet dokonania płatności.
+                    Proces phishingu obelmuje następulące etapy:
+                        <ol>
+                            <li>Planowanie — atakujący wybierają cel (firmę lub konkretną osobę) oraz decydują się, jak zdobyć adresy e-mail wybranych osób.</li>
+                            <li>Przygotowania — po wybraniu i zidentyfikowaniu celu i ofiar, osoby odpowiedzialne za atak tworzą metody dostarczania wiadomości oraz kradzieży danych.
+                            Najczęściej w tym celu jest wykorzystywana wiadomość e-mail oraz strona internetowa często przypominająca albo nawet identyczna z już istniejącą inną stroną.</li>
+                            <li>Atak — wysyłane zostają fałszywe wiadomości, które wyglądają na e-maile od źródła, które wydaje się autentyczne.</li>
+                            <li>Zbieranie danych — rejestrowane są informację, które ofiary wprowadzają na stronach internetowych.</li>
+                            <li>Kradzież tożsamości i oszustwa — phisherzy wykorzystują zebrane informacje do dokonywania nielegalnych zakupów lub innych form wykorzystania danych.</li>
+                        </ol>
+                    Jak widać powyżej jest to bardzo niebezpieczny typ ataku dla naszych danych. Możemy naprawdę dużo stracić przez nie. <br>
+                    Jednak istnieją metody jak się przed nimi chronić:
+                    <ol>
+                        <li>Wielopoziomowe uwierzytelnianie — jest to dobra metoda, ponieważ aby zalogować się do naszego konta bankowego poza loginem i
+                            hasłem potrzebujemy też dodatkowej autoryzacje poprzez kod, który dostajemy sms-em lub za pomocą aplikacji na telefon.
+                            Jest to szeroki sposób ochrony dodatkowo może także obejmować wiele rzeczy jak wyżej wymieniony kod czy coś takiego
+                            jak biometria czyli odcisk naszego palca lub skan naszej twarzy.</li>
+                        <li>Używaj filtrów SPAM, które wykrywają wirusy, puste wiadomości itp.</li>
+                        <li>Rozpoznawanie oznak phishingu — naucz się rozpoznawać typowe cechy tych ataków. Mogą to
+                            być nieznane adresy e-mail, błędy ortograficzne oraz gramatyczne, pilne żądania działania czy podejrzane
+                            linki lub załączniki.</li>
+                        <li>Nie odpowiadaj na podejrzane wiadomości. Jeśli jakaś wiadomość wydaje Ci się wzbudzać wątpliwości</li>
+                    </ol>
+                    Dzięki przestrzeganiu i stosowaniu się do tych metod na pewno zmniejszysz ryzyko na bycie narażonym tego typu atakami.
+                    </p>
+                    <h3>Spyware</h3>
+                    <p class="card-text">Innym typem ataków na nasze dane jest spyware, czyli szkodliwe oprogramowanie szpiegowskie, które jest jednym z rodzajów malware. Malware jest uciążliwy lub szkodliwy
+                        typ oprogramowania, który ma na celu potajemnie uzyskać dostęp do urządzenia bez wiedzy użytkownika. Czym się wyróżnia w takim razie spyware — bez zgody użytkownika,
+                        monitoruje jego aktywnność podczas korzystania z komputera lub urządzenia mobilnego. Jednym ze szczególnych rodzajów tego typu oprogramowania są keyloggery,
+                        które rejestrują aktywność użytkownika za pomocą wciskanych klawiszy na klawiaturze. Innym typem spyware są trojany bankowe — przejmują one dane dostępowe do systemów bankowości elektronicznej.
+                        Spyware jest programem działającym ciągle w tle, jest trudny do zidentyfikowania, ponieważ stanowi część innego programu. Co ciekawe poza monitorowaniem aktywności użytkownika, może także
+                        modyfikować bez jego wiedzy ustawienia komputera, przeglądarki czy rejestry systemu. W celu znalezienia się na urządzeniu spyware korzysta z luk w zabezpieczeniach systemu czy przeglądarki.
+                        Oprogramowania szpiegujące gromadzą prywatne dane użytkownika takie jak PESEL, login i hasła do kont bankowych czy numery kart kredytowych/debetowych. Może także uzyskać dostęp do historii przeglądarki.
+                        Dane te następnie udostępnia osobom, dla których dostęp do tych danych jest nieporządany. Jak widac to też jest duże zagrożenie dla naszych danych.
+                        W takim razie, w jaki sposób chronić się przed tego typu oprogramowaniem. Oto kilka wskazówek:
+                        <ol>
+                            <li>Pobieraj tylko pliki z zaufanych i pewnych źródeł — niebezpieczne oprogramowanie często jest dołączane do plików pobieranych z nieznanych stron.</li>
+                            <li>Zainstaluj i uruchom zaporę ogniową oraz antywirus — zapora ta może blokować nieporządane próby dostępu do twojego komputera</li>
+                            <li>Jeśli to możliwe, unikaj podawania swoich danych osobowych na stronach internetowych.</li>
+                            <li>Nie otwieraj wiadomości e-mail, nie klikaj w linki ani nie otwieraj załączników, jeżeli nie pochodzą od zaufanych źródeł.</li>
+                        </ol>
+                        Warto jednak pamiętać, że żadne zabezpieczenie nie jest w 100% skuteczne, dlatego zawsze należy zachowywać ostrożność podczas korzystania z komputera, a w szczególności z internetu.
+                    </p>
+<!--                    <h3>Ataki typu Man-in-the-Middle (MitM)</h3>-->
+<!--                    <p class="card-text">-->
+<!--                        Jednym z pozostałych najważniejszych typów ataków związanych z utratą danych jest Man-in-the-Middle.</p>-->
+                    <h3>Ataki na hasła wykorzystujące metody brute force oraz słownikowe</h3>
+                    <p class="card-text">Według mnie jest to równie niebezpieczny typ ataku co phishing czy malware,
+                        ponieważ z dzisiejszą mocą obliczeniową komputerów nasze hasła mogą być złamane w krótkim czasie,
+                        jeżeli nie są odpowiednio silne w szczególności w metodzie brute force, ale
+                        może najpierw wytłumaczmy, czym w ogóle są te metody oraz jak one działają. Zacznijmy od ataków brute force
+                        jest to metoda hakerska polegająca na próbie odgadnięcia hasła, czy danych do logowania poprzez prostą metodę prób i błędów.
+                        To niezawodna taktyka zdobywania nieporządanego dostępu. Osoba przeprowadzająca atak wykorzystuję komputer do generowania i testowania
+                        wielu kombinacji nazw użytkowników i haseł. Proces trwa do momentu uzyskania poprawnych danych logowania. Właśnie w ten sposób działają ataki tego typu.
+                        <br>
+                        Ataki słownikowe jest to technika hakerska polegająca na próbie złamania hasła przez ciągłe próbowanie haseł ze stworzonego wcześniej słownika haseł
+                        zawierającego najczęściej używane hasła wśród użytkowników. Przejdźmy przez poszczególne kroki tego ataku od samego początku:
+                        <ol>
+                            <li>Na początku haker tworzy wyżej wymieniony słownik haseł z popularnymi frazami oraz słowami, które mają szanse być szukanym hasłem.</li>
+                            <li>W kolejnym kroku atakujący testuje na koncie ofiary za pomocą odpowiednich do tego narzędzi.</li>
+                            <li>Gdy hasło zostanie znalezione, cyberprzestępca uzyskuję dostęp do konta ofiary.</li>
+                        </ol>
+                        Ataki słownikowe są skuteczne, ponieważ wiele użytkowników stosuje proste, łatwe do odgadnięcia hasła. Często są używane takie jak "123456", "password" czy "admin".
+                        Chociaż włamania tego typu wydają się prostsze niż ataki brute force, to ich potencjalne konsekwencje i zagrożenia często są równie wysokie.
+                        Gdy cyberprzestępca uzyska dostęp do naszych danych, może je wykorzystać do nielegalnych, złych celów takich jak przestępstwa finansowe.
+                        <br>
+                        Jak jednak chronić się przed tego typu włamaniami? Oto kilka sposobów:
+                        <ol>
+                            <li>Stosuj silne hasła — czym się one charakteryzują, możesz dowiedzieć się w kolejnej sekcji.</li>
+                            <li>Zmieniaj co jakiś czas hasła.</li>
+                            <li>Nie korzystaj z tego samego hasła na kilku serwisach.</li>
+                            <li>Korzystaj z biometrii zamiast hasła, gdzie tylko jest to możliwe.</li>
+                        </ol>
+                        <br>
+                        Jak widzisz w sieci, istnieje wiele zagrożeń. Jednak dzięki temu fragmentowi dowiedziałeś się o kilku najczęściej występujących oraz jak przed nimi uchronić swoje dane.
+                        Jednak pamiętaj, że zawsze warto być czujnym i dbać o swoje bezpieczeństwo online.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+{% include 'footer.html' %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/colorTheme.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="{{ url_for('index') }}">Security Pass Guide</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Strona główna</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('checkAndGeneratePassword') }}">Generator i sprawdzanie hasła</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Edukacja
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="{{ url_for('dangerous') }}">Niebezpieczeństwa związane z hasłami</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('strongPassword') }}">Czym jest silne hasło oraz jak je tworzyć?</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('passwordStorage') }}">Jak przechowywać hasła?</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ url_for('quiz') }}">Test sprawdzający</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <button id="theme-toggle-navbar" class="btn btn-light"><i class="bi bi-brightness-high" id="icon"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

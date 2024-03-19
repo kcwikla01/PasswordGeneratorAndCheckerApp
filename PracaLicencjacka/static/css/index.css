@@ -1,0 +1,24 @@
+.carousel-item p {
+    font-size: 2rem; /* Rozmiar tekstu w karuzeli */
+}
+
+.carousel-item h2 {
+    font-size: 2.5rem;
+}
+.carousel-item .container {
+    border: 1px solid #ced4da;
+    background-color: #343a40;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+@media (max-width: 600px) {
+    .carousel-item h2{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .carousel-item p{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
