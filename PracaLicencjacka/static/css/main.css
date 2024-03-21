@@ -48,12 +48,10 @@ body {
 @keyframes showSection {
     0% {
         opacity: 0;
-        transform: translateY(20px);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 .form-container .card-body {
@@ -69,12 +67,12 @@ body {
     margin-bottom: 0.5rem; /* Margines od dołu */
 }
 /* Ukryj sekcje na początku */
-.carousel, .checkPassword,.generator{
+.carousel, .checkPassword,.generator,.result,.questions{
     animation: showSection 1s ease-out forwards;
 }
 
 /* Wyświetl sekcje po załadowaniu strony */
-.loaded .carousel, .loaded .checkPassword,.loaded .generator {
+.loaded .carousel, .loaded .checkPassword,.loaded .generator,.loaded .result, .loaded .questions {
     opacity: 1;
 }
 /* Styl dla stopki */

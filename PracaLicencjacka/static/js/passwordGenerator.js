@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
         if(!useUppercase && !useLowercase && !useSpecialChars && useNumbers){
-            displayPassword('Proszę zmienić parametry - używanie samych cyfr nie jest dobrym rozwiązaniem, ponieważ jest mało znaków możliwych do użycia dodaj jeszcze jakąś opcję.')
+            displayPassword('Proszę zmienić parametry - korzystanie z samych cyfr nie jest dobrym rozwiązaniem, ponieważ jest mało znaków możliwych do użycia dodaj jeszcze jakąś opcję.')
             return;
         }
         let password = '';
