@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     passwordInput.addEventListener('input', function () {
-        const password = passwordInput.value;
+        const password = passwordInput.value.replace(/\s/g, '');
+        passwordInput.value = password;
         const passwordLength = password.length;
 
         // Update password length message
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             checkPasswordStrength(password);
             updatePasswordStrength(password);
         }
+
     });
 
     document.getElementById("showPasswordButton").addEventListener("click", function () {
