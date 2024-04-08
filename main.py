@@ -34,9 +34,20 @@ def passwordStorage():
     return render_template('passwordStorage.html')
 
 
+def get_weak_passwords_dictionary():
+    with open("500-worst-passwords.txt","r") as file:
+        passwords=[]
+        for line in file:
+            passwords.append(line.strip())
+        passwords_json=json.dumps(passwords)
+        return passwords_json
+
+
+
+
 @app.route('/checkAndGeneratePassword')
 def checkAndGeneratePassword():
-    return render_template('checkAndGeneratePassword.html')
+    return render_template('checkAndGeneratePassword.html',passwordList=get_weak_passwords_dictionary())
 
 
 @app.route('/strongPassword')

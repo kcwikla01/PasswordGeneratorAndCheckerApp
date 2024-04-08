@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 passwordLengthMessage.textContent = 'Silne hasło';
                 passwordLengthMessage.style.color = "green";
                 setProgressBarWidths([33, 33, 34]);
+                console.log(entropy);
             }
         }
     }
