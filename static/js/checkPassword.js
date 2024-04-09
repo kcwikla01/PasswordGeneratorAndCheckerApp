@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function updatePasswordStrength(password) {
+        const entropy = calculateAmountOfInformation(password);
         const isSequential = isSequentialPassword(password);
         const hasReapeating = hasRepeatingPassword(password);
-        const entropy = calculateAmountOfInformation(password);
 
         const onlyDigits = /^\d+$/.test(password);
 
