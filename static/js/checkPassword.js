@@ -183,13 +183,9 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 missingElements.push('<span class="text-success">&#10004; Cyfrę.</span>');
             }
-
-            // Jeśli hasło jest puste, ustaw komunikat na czerwono
             if (password === '') {
                 missingElements = missingElements.map(element => `<span class="text-danger">${element}</span>`);
             }
-
-            // Aktualizuj komunikat z brakującymi elementami
             whatAddSrodek.innerHTML = missingElements.join(' ');
     }
 
