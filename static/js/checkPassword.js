@@ -63,35 +63,44 @@ document.addEventListener("DOMContentLoaded", function() {
             passwordLengthMessage.textContent = 'Słabe hasło (używasz tylko cyfr oraz masz powtórzenia znaków lub często powtarzające się sekwencje znaków)';
             passwordLengthMessage.style.color = "red";
             setProgressBarWidths([33, 0, 0]);
+            return;
         }
-
         if (onlyDigits && entropy>=40) {
             passwordLengthMessage.textContent = 'Średnie hasło (używasz tylko cyfr)';
             passwordLengthMessage.style.color = "orange";
             setProgressBarWidths([33, 33, 0]);
             return;
         }
-
-
-        if (isSequential && entropy>=40) {
+         if (!onlyDigits && isSequential && entropy<40) {
+            passwordLengthMessage.textContent = 'Słabe hasło (hasło zawiera często używane fragmenty haseł)';
+            passwordLengthMessage.style.color = "red";
+            setProgressBarWidths([33, 0, 0]);
+            if (hasReapeating){
+                passwordLengthMessage.textContent = 'Słabe hasło (hasło zawiera powtarzające się znaki co najmniej 4 razy oraz często używane fragmenty haseł)';
+                passwordLengthMessage.style.color = "red";
+                setProgressBarWidths([33, 0, 0]);
+            }
+            return;
+        }
+        if (!onlyDigits && isSequential && entropy>=40) {
             passwordLengthMessage.textContent = 'Średnie hasło (hasło zawiera często używane fragmenty haseł)';
             passwordLengthMessage.style.color = "orange";
             setProgressBarWidths([33, 33, 0]);
+            if (hasReapeating){
+                passwordLengthMessage.textContent = 'Słabe hasło (hasło zawiera powtarzające się znaki co najmniej 4 razy oraz często używane fragmenty haseł)';
+                passwordLengthMessage.style.color = "red";
+                setProgressBarWidths([33, 0, 0]);
+            }
         }
-        else if (hasReapeating && entropy>=40){
+        else if (!onlyDigits && hasReapeating && entropy>=40){
             passwordLengthMessage.textContent = 'Średnie hasło (hasło zawiera powtarzające się znaki co najmniej 4 razy)';
             passwordLengthMessage.style.color = "orange";
             setProgressBarWidths([33, 33, 0]);
         }
-        else if (hasReapeating && entropy<40){
+        else if (!onlyDigits && hasReapeating && entropy<40){
             passwordLengthMessage.textContent = 'Słabe hasło (hasło zawiera powtarzające się znaki co najmniej 4 razy oraz ma mało znaków i słabe ich zróżnicowanie)';
             passwordLengthMessage.style.color = "red";
             setProgressBarWidths([33, 0, 0]);
-        }
-        else if (hasReapeating && isSequential){
-            passwordLengthMessage.textContent = 'Słabe hasło (hasło zawiera powtarzające się znaki co najmniej 4 razy oraz często używane fragmenty haseł)';
-            passwordLengthMessage.style.color = "orange";
-            setProgressBarWidths([33, 33, 0]);
         }
         else
         {
