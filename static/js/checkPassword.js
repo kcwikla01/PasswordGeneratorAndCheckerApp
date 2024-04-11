@@ -59,19 +59,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 passwordLengthMessage.style.color = "red";
                 setProgressBarWidths([33, 0, 0]);
             }
-            if ((isSequential || hasReapeating)) {
-                passwordLengthMessage.textContent = 'Słabe hasło (używasz tylko cyfr oraz masz powtórzenia znaków lub często powtarzające się sekwencje znaków)';
-                passwordLengthMessage.style.color = "red";
-                setProgressBarWidths([33, 0, 0]);
-                return;
-                //git
-            }
-            if (entropy >= 40) {
+            else {
                 passwordLengthMessage.textContent = 'Średnie hasło (używasz tylko cyfr)';
                 passwordLengthMessage.style.color = "orange";
                 setProgressBarWidths([33, 33, 0]);
-                return;
-                //git
+            }
+             if (hasReapeating){
+                passwordLengthMessage.textContent = 'Słabe hasło (używasz tylko cyfr oraz masz powtórzenia znaków)';
+                passwordLengthMessage.style.color = "red";
+                setProgressBarWidths([33, 0, 0]);
+            }
+            if (isSequential){
+                passwordLengthMessage.textContent = 'Słabe hasło (używasz tylko cyfr oraz często powtarzające się sekwencje znaków)';
+                passwordLengthMessage.style.color = "red";
+                setProgressBarWidths([33, 0, 0]);
+                if (hasReapeating){
+                    passwordLengthMessage.textContent = 'Słabe hasło (używasz tylko cyfr oraz masz powtórzenia znaków i często powtarzające się sekwencje znaków)';
+                    passwordLengthMessage.style.color = "red";
+                    setProgressBarWidths([33, 0, 0]);
+                }
             }
         }
         else {
