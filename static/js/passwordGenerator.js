@@ -55,11 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const randomIndex = Math.floor(Math.random() * (charset.length-1));
             password += charset[randomIndex];
         }
-
-        // Sprawdzenie siły hasła i wyświetlenie tylko silnych haseł
-        if (!isSequentialPassword(password)  && password.length===desiredLength && !hasRepeatingPassword(password)&& isCheckAllParameters(password,useUppercase,useLowercase,useSpecialChars,useNumbers)){
+        if (!isSequentialPassword(password) && !hasRepeatingPassword(password)&& isCheckAllParameters(password,useUppercase,useLowercase,useSpecialChars,useNumbers)){
             displayPassword(password)
-            updatePasswordStrength(password,desiredLength,charset);
         } else {
             generateAndCheckPassword(); // Generowanie nowego hasła, jeśli znalezione hasło nie spełnia wymagań
         }
@@ -75,27 +72,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 (useSpecialChars=== /[!@#$%^&*()_+\-=\[\]{};:\\|,.<>\/?]/.test(password)) &&
                 (useNumbers===/[0-9]/.test(password));
     }
-
-    function updatePasswordStrength(password,desiredLenght,charset) {
-        const amountOfInformation = calculateAmountOfInformation(password,charset);
-
-        if (amountOfInformation < 40) {
-            generateAndCheckPassword();
-        } else if (amountOfInformation >= 40 && amountOfInformation < 64) {
-            generateAndCheckPassword();
-        } else if (amountOfInformation >= 64 && desiredLenght===password.length) {
-            displayPassword(password);
-        }
-    }
-
     function calculateEntropy(charset){
         const charsetSize = charset.length;
         return Math.log2(charsetSize);
     }
-    function calculateAmountOfInformation(password,charset) {
-        return password.length * calculateEntropy(charset);
-    }
-
     function generateAlphabet(useUppercase,useLowercase,useSpecialChars,useNumbers){
         let charset = '';
 
