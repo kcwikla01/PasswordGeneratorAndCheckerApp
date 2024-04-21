@@ -20,7 +20,7 @@
     <h2>Twój wynik to: <br>{{ score }}/{{ total }} <br>
         ({{ (score/total)*100|round }}%)</h2>
     <h3>Jeśli chcesz możesz spróbowac rozwiązać quiz ponownie przyciskiem poniżej</h3>
-    <a href="{{ url_for('quiz') }}"><input type="button" value="SPRÓBUJ PONOWNIE" id="returnQuiz"></a>
+    <a href="{{ url_for('quiz') }}" id="returnQuiz">SPRÓBUJ PONOWNIE</a>
 </div>
 
 

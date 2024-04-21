@@ -43,11 +43,13 @@ nav{
     width: 200px;
     height: 40px;
     margin: 20px auto;
+    padding-top:7px;
     background-color: #17a2b8;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
 a{
