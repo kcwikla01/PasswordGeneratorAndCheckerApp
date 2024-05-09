@@ -1,5 +1,4 @@
 function isSequentialPassword(password) {
-            console.log(weakPasswordTable[0]);
             for (let pattern of weakPasswordTable) {
                 if (password.toLowerCase().includes(pattern)) {
                     return true;
