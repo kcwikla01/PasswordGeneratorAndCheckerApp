@@ -1,42 +1,91 @@
 [
-  {"id": 1, "question": "Co to jest spyware?", "options": ["Oprogramowanie, które chroni komputer przed wirusami","Oprogramowanie, które monitoruje aktywność użytkownika bez jego zgody","Oprogramowanie, które pomaga w nawigacji w Internecie"], "answer": 2},
-  {"id": 2, "question": "Jakie są zalecane metody ochrony przed spyware?", "options": ["Nie otwieranie wiadomości e-mail, linków ani załączników, które nie pochodzą od zaufanych źródeł","Unikanie instalacji zapor ogniowych i antywirusów","Pobieranie plików tylko z nieznanych źródeł"], "answer": 1},
-  {"id": 3, "question": "Co to jest phishing?", "options": ["Filtr SPAM wykrywający wirusy i puste wiadomości","Metoda ochrony danych polegająca na wielopoziomowym uwierzytelnianiu","Technika wykorzystująca wiadomości e-mail, sms czy czaty internetowe do wyłudzenia danych"], "answer": 3},
-  {"id": 4, "question": "Czym różni się atak brute force od metody słownikowej?", "options": [
+  {
+    "id": 1,
+    "question": "Co to jest spyware?",
+    "options": ["Oprogramowanie, które chroni komputer przed wirusami","Oprogramowanie, które monitoruje aktywność użytkownika bez jego zgody","Oprogramowanie, które pomaga w nawigacji w Internecie"],
+    "answer": 2
+  },
+  {
+    "id": 2,
+    "question": "Jakie są zalecane metody ochrony przed spyware?",
+    "options": ["Nie otwieranie wiadomości e-mail, linków ani załączników, które nie pochodzą od zaufanych źródeł","Unikanie instalacji zapor ogniowych i antywirusów","Pobieranie plików tylko z nieznanych źródeł"],
+    "answer": 1
+  },
+  {
+    "id": 3, "question": "Co to jest phishing?",
+    "options": ["Filtr SPAM wykrywający wirusy i puste wiadomości","Metoda ochrony danych polegająca na wielopoziomowym uwierzytelnianiu","Technika wykorzystująca wiadomości e-mail, sms czy czaty internetowe do wyłudzenia danych"],
+    "answer": 3
+  },
+  {
+    "id": 4,
+    "question": "Czym różni się atak brute force od metody słownikowej?",
+    "options": [
     "Metoda słownikowa polega na próbie odgadnięcia haseł poprzez systematyczne testowanie wszystkich możliwych kombinacji, podczas gdy atak typu brute force polega na próbie odgadnięcia haseł poprzez systematyczne testowanie słów z predefiniowanego słownik",
     "Zarówno atak typu brute force, jak i metoda słownikowa polegają na próbie odgadnięcia haseł poprzez systematyczne testowanie słów z predefiniowanego słownika",
     "Atak typu brute force polega na próbie odgadnięcia haseł poprzez systematyczne testowanie wszystkich możliwych kombinacji, podczas gdy metoda słownikowa polega na próbie odgadnięcia haseł poprzez systematyczne testowanie słów z predefiniowanego słownika"
-  ], "answer": 3},
-  {"id": 5, "question": "Które z poniższych są typowymi cechami ataków phishingowych?", "options": [
+  ],
+    "answer": 3
+  },
+  {
+    "id": 5,
+    "question": "Które z poniższych są typowymi cechami ataków phishingowych?",
+    "options": [
     "Wiadomości od znanych firm, poprawna gramatyka i ortografia, brak pilnych żądań działania",
     "Nieznane adresy e-mail, błędy ortograficzne oraz gramatyczne, pilne żądania działania, podejrzane linki lub załączniki",
     "Wiadomości od nieznajomych, poprawna gramatyka i ortografia, brak linków lub załączników"
-  ], "answer": 2},
-  {"id": 6, "question": "Która z poniższych metod jest bardziej czasochłonna, ale potencjalnie skuteczniejsza przeciwko silnym hasłom?", "options": [
+  ],
+    "answer": 2
+  },
+  {
+    "id": 6,
+    "question": "Która z poniższych metod jest bardziej czasochłonna, ale potencjalnie skuteczniejsza przeciwko silnym hasłom?",
+    "options": [
     "Metoda słownikowa",
     "Atak typu brute force",
     "Obydwie metody są równie czasochłonne i skuteczne"
-  ], "answer": 2} ,
-  {"id": 7, "question": "Co to jest entropia w kontekście haseł?", "options": [
+  ],
+    "answer": 2
+  } ,
+  {
+    "id": 7,
+    "question": "Co to jest entropia w kontekście haseł?",
+    "options": [
     "Jest to miara złożoności hasła.",
     "Jest to miara losowości hasła.",
     "Wszystkie powyższe odpowiedzi są prawidłowe"
-  ], "answer": 3},
-  {"id": 8, "question": "Jakie jest znaczenie regularnej zmiany haseł?", "options": [
+  ],
+    "answer": 3
+  },
+  {
+    "id": 8,
+    "question": "Jakie jest znaczenie regularnej zmiany haseł?",
+    "options": [
     "Zmniejsza ryzyko, że ktoś odgadnie nasze hasło.",
     "Zwiększa ryzyko, że ktoś odgadnie nasze hasło.",
     "Wszystkie powyższe odpowiedzi są prawidłowe"
-  ], "answer": 1},
-  {"id": 9, "question": "Dlaczego nie zaleca się zapisywania haseł w przeglądarce internetowej?", "options": [
+  ],
+    "answer": 1
+  },
+  {
+    "id": 9,
+    "question": "Dlaczego nie zaleca się zapisywania haseł w przeglądarce internetowej?",
+    "options": [
     "Ponieważ przeglądarki internetowe często zapominają zapisane hasła.",
     "Ponieważ informacje te są przechowywane w sposób, który pozwala na ich odczytanie przez złośliwe oprogramowanie.",
     " Ponieważ hasła zapisane w przeglądarce są łatwe do zgadnięcia"
-  ], "answer": 2},
-  {"id": 10, "question": "Dlaczego zaszyfrowane dyski twarde są bezpiecznym miejscem do przechowywania haseł??", "options": [
+  ],
+    "answer": 2
+  },
+  {
+    "id": 10,
+    "question": "Dlaczego zaszyfrowane dyski twarde są bezpiecznym miejscem do przechowywania haseł??",
+    "options": [
     "Ponieważ są one zabezpieczone przed wirusami.",
     "Ponieważ dyski te są automatycznie zamykane po pewnym czasie bezczynności",
     "Ponieważ nawet jeśli ktoś zdobędzie fizyczny dostęp do dysku, nie będzie mógł odczytać zawartych na nim danych bez odpowiedniego klucza."
-  ], "answer": 3}
+  ],
+    "answer": 3
+  }
 
 
 ]

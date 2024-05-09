@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const entropy = calculateAmountOfInformation(password);
         const isSequential = isSequentialPassword(password);
         const hasReapeating = hasRepeatingPassword(password);
-
         const onlyDigits = /^\d+$/.test(password);
+
         if (onlyDigits) {
             if (entropy < 40) {
                 passwordLengthMessage.textContent = 'Słabe hasło (używasz tylko cyfr)';
@@ -103,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 }
             }
-        //git
         else if (hasReapeating && entropy>=40){
             passwordLengthMessage.textContent = 'Średnie hasło (hasło zawiera powtarzające się znaki co najmniej 4 razy)';
             passwordLengthMessage.style.color = "orange";

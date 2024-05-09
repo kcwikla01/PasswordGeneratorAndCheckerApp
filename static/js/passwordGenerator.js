@@ -4,30 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const lengthRange = document.getElementById('lengthRange');
     const lengthValue = document.getElementById('lengthValue');
     lengthValue.innerHTML+=parseInt(document.getElementById('lengthRange').value);
-    generatePassword();
     lengthRange.addEventListener('input', () => {
         lengthValue.textContent = lengthRange.value;
     });
-
-    function generatePassword(length, useUppercase, useLowercase, useSpecialChars, useNumbers) {
-        if (length <= 0) return '';
-
-        let charset = '';
-        if (useUppercase) charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        if (useLowercase) charset += 'abcdefghijklmnopqrstuvwxyz';
-        if (useSpecialChars) charset += '!@#$%^&*()_+-=[]{};:\'|,.<>/?';
-        if (useNumbers) charset += '0123456789';
-
-        let password = '';
-        for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * charset.length);
-            password += charset[randomIndex];
-        }
-        return password;
-    }
-
     document.getElementById('lengthRange').addEventListener('input', generateAndCheckPassword);
-
+    generateAndCheckPassword();
     function generateAndCheckPassword() {
         const desiredLength = parseInt(document.getElementById('lengthRange').value);
         const useUppercase = document.getElementById('uppercaseCheckbox').checked;
@@ -58,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isSequentialPassword(password) && !hasRepeatingPassword(password)&& isCheckAllParameters(password,useUppercase,useLowercase,useSpecialChars,useNumbers)){
             displayPassword(password)
         } else {
-            generateAndCheckPassword(); // Generowanie nowego hasła, jeśli znalezione hasło nie spełnia wymagań
+            generateAndCheckPassword();
         }
     }
 
@@ -106,6 +87,4 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.form-check-input').forEach(item => {
         item.addEventListener('input', generateAndCheckPassword);
     });
-
-    generateAndCheckPassword();
 });
