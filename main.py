@@ -14,7 +14,6 @@ if not path.exists(env_path):
         set_key(env_path, "SECRET_KEY", token_urlsafe(24))
 
 app.secret_key = getenv("SECRET_KEY")
-
 with open('pytania.json', encoding='utf-8') as f:
     questions = json.load(f)
 
@@ -35,19 +34,17 @@ def passwordStorage():
 
 
 def get_weak_passwords_dictionary():
-    with open("500-worst-passwords.txt","r") as file:
-        passwords=[]
+    with open("500-worst-passwords.txt", "r") as file:
+        passwords = []
         for line in file:
             passwords.append(line.strip())
-        passwords_json=json.dumps(passwords)
+        passwords_json = json.dumps(passwords)
         return passwords_json
-
-
 
 
 @app.route('/checkAndGeneratePassword')
 def checkAndGeneratePassword():
-    return render_template('checkAndGeneratePassword.html',passwordList=get_weak_passwords_dictionary())
+    return render_template('checkAndGeneratePassword.html', passwordList=get_weak_passwords_dictionary())
 
 
 @app.route('/strongPassword')

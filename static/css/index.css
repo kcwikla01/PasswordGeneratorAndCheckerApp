@@ -5,6 +5,7 @@
 .carousel-item h2 {
     font-size: 2.5rem;
 }
+
 .carousel-item .container {
     border: 1px solid #ced4da;
     background-color: #343a40;
@@ -13,12 +14,31 @@
 }
 
 @media (max-width: 600px) {
-    .carousel-item h2{
+    .carousel-item h2 {
         font-size: 2rem;
         text-align: center;
     }
-    .carousel-item p{
+    .carousel-item p {
         font-size: 1.5rem;
         text-align: center;
+    }
+    .carousel-item .container {
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item h2 {
+        font-size: 1.5rem;
+    }
+    .carousel-item p {
+        font-size: 1.2rem;
+    }
+    .carousel-item .container {
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
